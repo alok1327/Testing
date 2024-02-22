@@ -4,5 +4,5 @@ Password="Ded@1327#"
 docker build -t newimage .
 docker tag newimage ded1327/mynewimage1
 echo "$Password" | docker login --username "$USERNAME" --password-stdin
-sudo docker push ded1327/mynewimage1
+docker push ded1327/mynewimage1
 
