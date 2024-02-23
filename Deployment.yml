@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: newset
+  labels:
+    name: newset
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      name: newset
+  template:
+    metadata:
+      labels:
+        name: newset
+    spec:
+      containers:
+      - name: mycontainer
+        image: nginx
+        command: ["/bin/bash", "-c"]
+        args:
+           - "echo 'Hello Code working Successfully Alok configured' > /usr/share/nginx/html/index.html && exec nginx -g 'daemon off;'"
+          # command: ["bin/bash", "-c", "while true; do echo 'Hello from the debian container' > /usr/share/nginx/html/index.html; sleep 5; done"]
