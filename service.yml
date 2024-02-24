@@ -10,3 +10,4 @@ spec:
   selector:
     name: newset
   type: NodePort
+    #ok
