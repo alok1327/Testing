@@ -17,8 +17,8 @@ spec:
     spec:
       containers:
       - name: mycontainer
-        image: nginx
-        command: ["/bin/bash", "-c"]
-        args:
-           - "echo 'Hello Code working Successfully Alok configured' > /usr/share/nginx/html/index.html && exec nginx -g 'daemon off;'"
+        image: ded1327/mynewimage1
+          #command: ["/bin/bash", "-c"]
+          #args:
+          #- "echo 'Hello Code working Successfully Alok configured' > /usr/share/nginx/html/index.html && exec nginx -g 'daemon off;'"
           # command: ["bin/bash", "-c", "while true; do echo 'Hello from the debian container' > /usr/share/nginx/html/index.html; sleep 5; done"]
